@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <title>WhiskerGear — Pet Health Products</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        margin: 0;
+        overflow: hidden;
+        background: #fdf8f0;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+      }
+
+      .clip {
+        position: absolute;
+        inset: 0;
+      }
+
+      #source-frame {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        background: #fdf8f0;
+      }
+
+      #source-video {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        transform: scaleY(1.052632);
+        transform-origin: top center;
+      }
+
+      #brand-card {
+        overflow: hidden;
+        background-color: #fdf8f0;
+        background-image: radial-gradient(circle, rgba(26, 23, 18, 0.2) 1.5px, transparent 1.7px);
+        background-size: 28px 28px;
+      }
+
+      #brand-card::before,
+      #brand-card::after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 14px;
+        content: "";
+        background: #e0930c;
+      }
+
+      #brand-card::before {
+        top: 0;
+      }
+
+      #brand-card::after {
+        bottom: 0;
+      }
+
+      #brand-lockup {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 72px;
+      }
+
+      #brand-logo {
+        display: block;
+        width: 840px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-hxhf" id="root" data-composition-id="main" data-start="0" data-duration="64.83" data-width="1080" data-height="1920">
+      <div data-hf-id="hf-drb5" id="source-frame" aria-hidden="true">
+        <video data-hf-id="hf-zd1c" id="source-video" class="clip" src=".media/video/video_001.mp4" data-start="0" data-duration="61.70" data-media-start="0" data-track-index="1" data-layout-allow-overflow="" muted playsinline preload="auto"></video>
+      </div>
+
+      <audio data-hf-id="hf-gy5h" id="source-audio" class="clip" src=".media/video/video_001.mp4" data-start="0" data-duration="61.70" data-media-start="0" data-track-index="10" data-volume="1" preload="auto"></audio>
+
+      <section data-hf-id="hf-t6kr" id="brand-card" class="clip" data-start="61.70" data-duration="3.13" data-track-index="1" aria-label="WhiskerGear">
+        <div data-hf-id="hf-ybhr" id="brand-lockup">
+          <img data-hf-id="hf-ci4t" id="brand-logo" src=".media/images/logo_001.png" alt="WhiskerGear">
+        </div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(
+        "#brand-lockup",
+        { opacity: 0, scale: 0.96 },
+        { opacity: 1, scale: 1, duration: 0.6, ease: "power3.out" },
+        61.85,
+      );
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

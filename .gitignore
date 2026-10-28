@@ -1,0 +1,6 @@
+.env
+*.env
+*.log
+
+footage/*.mp4
+motion/.thumbnails/

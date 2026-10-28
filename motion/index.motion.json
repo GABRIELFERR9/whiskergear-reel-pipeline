@@ -1,0 +1,19 @@
+{
+  "duration": 64.83,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#source-video",
+      "bySec": 0.2
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#brand-logo",
+      "bySec": 62.6
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#brand-logo"
+    }
+  ]
+}
